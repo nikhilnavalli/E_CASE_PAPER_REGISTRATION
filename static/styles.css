@@ -1,0 +1,211 @@
+/* body > div > div > div {
+  margin : -30px 0px 0px -10px;
+  padding: -20px;
+  display: flex;
+} */
+
+/* .header{
+    background-color: white;
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+} */
+
+#headimage1 {
+  margin-left: -10px;
+}
+
+#headimage2 {
+  margin: 34px 0px 0px -150px;
+}
+
+#headtext {
+  font-size: 60px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-left: -40px;
+}
+
+.contact {
+  background-color: rgb(37, 36, 36);
+  color: aliceblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* #headimage1 {
+  animation: load1 2s linear;
+}
+
+#headimage2 {
+  animation: load1 2s linear;
+}
+
+@keyframes load1 {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+} */
+
+.btn-group{
+    display: inline;
+    overflow:nowrap;
+    white-space: nowrap;
+}
+
+footer {
+  background-color: #15212b;
+  margin-top: 10px;
+}
+
+.footer {
+  padding: 45px 0;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* footer div div{
+    width: %;
+  }
+   */
+footer div div ul li {
+  list-style-type: none;
+}
+
+footer div div ul li a {
+  text-decoration: none;
+  color: white;
+  font-family: poppins;
+  width: 55%;
+  display: inline-flex;
+  margin: 8px;
+}
+
+footer div div ul li i {
+    margin: 10px;
+    padding: 3px;
+}
+
+footer div div ul li a:hover {
+  color: #737373;
+}
+
+footer div div ul li .fa-color:hover {
+  cursor: pointer;
+  transform: translateX(-5px);
+}
+
+footer div div ul li{
+  margin: 5px;
+}
+
+footer div .footer-first{
+  width: 27%;
+  margin-left: 8%;
+}
+
+footer div .footer-second{
+  padding-right: -10px;
+}
+
+footer div .footer-third{
+  width: 30%;
+}
+
+.fa-customize {
+  font-size: 20px;
+}
+
+.fa-color {
+  color: white;
+}
+
+.fa-social{
+  font-size: 25px;
+}
+
+.fa-github {
+  font-size: 25px;
+}
+
+.fa-neos {
+  font-size: 40px;
+}
+
+main {
+  margin-top: 10px;
+  margin-bottom: 30%;
+}
+
+.pass{
+  display: flex;
+  align-items: center;
+}
+
+#forgot{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.registerform, .loginform{
+  margin: 10% 0 10% 0;
+}
+
+.loginform div div form .btnsub{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginform{
+  width: 20%;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+#group{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#receptionistloginform{
+  background-color: #272d38;
+  color: white;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  height: 102%;
+  padding: 30px 31px;
+}
+
+#receptionistgmail, #receptionistpassword{
+  background-color: #3b4352;
+  border-color: transparent;
+  color: white;
+}
+
+#new{
+  display: flex;
+  justify-content:center;
+}
+
+#new a{
+  text-decoration: none;
+  margin-left: 20px;
+  margin-right: 20px;
+}

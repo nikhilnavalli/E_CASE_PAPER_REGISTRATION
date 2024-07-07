@@ -1,0 +1,27 @@
+.doctors .first-row div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.doctors .second-row div{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.doctors div div div img{
+    padding: 10px;
+}
+
+.card:hover{
+    border: 1px solid black;
+}
+
+.doctors{
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
