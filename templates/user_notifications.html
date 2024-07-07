@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href={{ url_for('static',filename='styles.css' ) }}>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/de36949983.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Raleway:wght@500&display=swap"
+    rel="stylesheet">
+
+  <title>User notifications</title>
+
+  <style>
+    .firstsection {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 30px 0;
+    }
+
+    .leftsection {
+      width: 17%;
+    }
+
+    .leftsection {
+      color: black;
+      font-family: poppins;
+      font-size: 2.5rem;
+      margin: 20px -20%;
+    }
+
+    .purple,
+    #element {
+      color: rgb(128, 128, 239);
+    }
+
+    #element {
+      color: rgb(128, 128, 239);
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+
+    .name {
+      overflow: hidden;
+      animation: load 1500ms;
+      animation-fill-mode: both;
+      /* animation-delay: 500ms; */
+    }
+
+    body {
+      background-color: #f5f7fa;
+    }
+
+    p {
+      margin-left: 20px;
+    }
+
+    .note{
+      display: flex;
+      flex-direction: row;
+    }
+
+    i{
+      margin-top: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="row">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link px-4" href="/userhome">User home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-4" href="/usercasepaperregister">Add casepaper</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  px-4" href="/userhistory">History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  px-4" href="#footer">Help</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  px-4" href="/usernotifications"><i class="fa-sharp fa-regular fa-bell mx-1"></i>Notifications</a>
+          </li>
+        </ul>
+        <div id="group">
+          <div class="profile">
+            <div class="dropdown">
+              <button type="button" class="btn btn-light dropdown-toggle" data-bs-toggle="dropdown">My profile</button>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="/userprofile">Show profile</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="/edituserprofile">Edit profile</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="btn-group mx-3">
+            <a href="/userlogout" class="btn btn-danger">Logout</a>
+          </div>
+        </div>
+    </nav>
+  </div>
+  </div>
+
+  <!-- <section class="firstsection">
+    <div class="leftsection">
+      <div class="name">
+        <h2 class="purple">Hey{{'\t'+ session['userfirstname'] }}</h2>
+        <h3>Never miss any notification and stay updated</h3>
+      </div>
+    </div>
+
+    <div class="rightsection">
+      <hr/>
+      {% for result in result %}
+      <p style="color: red;">{{ result[1] }}</p>
+      <p>notification date :</p>
+      <p>{{ result[2] }}</p>
+      <hr/>
+      {% endfor %}
+    </div>
+  </section> -->
+
+  <!-- <div class="row">
+    <div class="col-3">
+      <div class="name mt-5 mx-5">
+        <h2 class="purple">Hey{{'\t'+ session['userfirstname'] }}</h2>
+        <h3>Never miss any notification and stay updated</h3>
+      </div>
+    </div>
+
+    <div class="col-7">
+      <hr/>
+      {% for result in result %}
+      <p style="color: red;">{{ result[1] }}</p>
+      
+      <span>notification date :</span><p>{{ result[2] }}</p>
+      <hr/>
+      {% endfor %}
+    </div>
+
+    <div class="col-2"></div>
+  </div> -->
+
+  <div class="row">
+    <div class="col-3">
+      <div class="name mt-5 mx-5">
+        <h2 class="purple">Hey{{'\t'+ session['userfirstname'] +','}}</h2>
+        <h3>Never miss any notification and stay updated</h3>
+      </div>
+    </div>
+
+    <div class="col-7">
+      <div class="card mt-5">
+        <div class="card-body">
+          {% for result in result %}
+          <div class="note">
+            <i class="fa-regular fa-comment"></i>
+            <p style="color: red;">{{ result[1] }}</p>
+          </div>
+
+          <div class="note">
+            <i class="fa-solid fa-calendar-days"></i>
+            <p>{{ result[2] }}</p>
+          </div>
+          <hr />
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="col-2"></div>
+  </div>
+
+  <main></main>
+
+  <footer>
+    <div class="footer" id="footer">
+      <div class="footer-first">
+        <h3 style="color: aliceblue;">Vision Health Care</h3>
+        <h5 style="color: aliceblue;">Our vision of your healthy life</h5>
+      </div>
+      <div class="footer-second">
+        <ul>
+          <li><i class="fa-solid fa-envelope fa-color fa-customize"></i><a href="#">visionhealthcare@gmail.com</a></li>
+          <li><i class="fa-solid fa-phone fa-color fa-customize"></i><a href="#">7044432991, 9999444821</a></li>
+          <li><i class="fa-solid fa-location-dot fa-color fa-customize"></i><a href="#">4th block, Main Road, Behind
+              Infinity Mall, Techpoor - 999333 </a></li>
+        </ul>
+      </div>
+      <div class="footer-third">
+        <ul>
+          <li><i class="fa-brands fa-instagram fa-color fa-social"></i><a href="#">Follow us on Instagram</a></li>
+          <li><i class="fa-brands fa-facebook fa-color fa-social"></i><a href="#">Like us on Facebook</a></li>
+          <li><i class="fa-brands fa-twitter fa-color fa-social"></i><a href="#">Follow us on Twitter</a></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

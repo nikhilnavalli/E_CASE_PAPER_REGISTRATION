@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href={{ url_for('static',filename='styles.css' ) }}>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://kit.fontawesome.com/de36949983.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Raleway:wght@500&display=swap"
+    rel="stylesheet">
+
+  <title>Home</title>
+
+  <style>
+    .testimonial-card .card-up {
+      height: 120px;
+      overflow: hidden;
+      border-top-left-radius: .25rem;
+      border-top-right-radius: .25rem;
+    }
+
+    .aqua-gradient {
+      background: linear-gradient(40deg, #2096ff, #05ffa3) !important;
+    }
+
+    .ambu-gradient {
+      background: linear-gradient(60deg, #e62c2c, #34b2ec) !important;
+    }
+
+    .testimonial-card .avatar {
+      width: 120px;
+      margin-top: -60px;
+      overflow: hidden;
+      border: 5px solid #fff;
+      border-radius: 50%;
+    }
+
+    #headimage1 {
+      animation: load1 2s linear;
+    }
+
+    #headimage2 {
+      animation: load1 2s linear;
+    }
+
+    @keyframes load1 {
+      from {
+        transform: rotateX(0deg);
+      }
+
+      to {
+        transform: rotateY(360deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="container" id="top">
+      <div class="row">
+        <div class="col-2">
+          <img id="headimage1" src={{ url_for('static',filename='head1.png' ) }} style="height:245px; width:265px;" />
+        </div>
+
+        <div class="col-9 heading">
+          <p style="text-align:center;" class="h1 text-primary" id="headtext"><strong>Vision Health Care </strong></p>
+          <p style="text-align:center;" class="h1 text-success">The Best Place For Your Perfect Health</p>
+
+        </div>
+
+        <div class="col-1">
+          <img id="headimage2" src={{ url_for('static',filename='head2.png' ) }} style="height:195px; width:100x;" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container-fluid">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link px-4" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-4" href="/services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  px-4" href="#footerhelp">Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  px-4" href="/ourdoctors">Our doctors</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link  px-4" href="#footerhelp">Help</a>
+          </li>
+        </ul>
+        <div class="btn-group mx-3">
+          <div class="btn-group">
+            <div class="dropdown">
+              <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Login</button>
+              <div class="dropdown-menu">
+                <li><a class="dropdown-item" href="/receptionistlogin">Receptionist Login</a></li>
+                <!-- <li><a class="dropdown-item" href="/doctorlogin">Doctor Login</a></li> -->
+                <li><a class="dropdown-item" href="/userlogin">User Login</a></li>
+              </div>
+            </div>
+            <a href="/userregister" class="btn btn-success">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <!-- <main style="margin-top: 0px;"> -->
+  <div class="row">
+    <div class="container-fluid">
+      <div class="col-12">
+        <!-- Carousel -->
+        <div id="demo" class="carousel slide  carousel-fade" data-bs-ride="carousel" data-mdb-interval="true">
+
+          <!-- Indicators/dots -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="4"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="5"></button>
+          </div>
+
+          <!-- The slideshow/carousel -->
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src={{ url_for('static',filename='hospic.jpg' ) }} style="height:650px ; width:100%;" />
+            </div>
+            <div class="carousel-item">
+              <img src={{ url_for('static',filename='hospic2.jpg' ) }} style="height:650px ; width:100%;" />
+            </div>
+            <div class="carousel-item">
+              <img src={{ url_for('static',filename='hospic3.jpg' ) }} style="height:650px ; width:100%;" />
+            </div>
+            <div class="carousel-item">
+              <img src={{ url_for('static',filename='hospic4.jpg' ) }} style="height:650px ; width:100%;" />
+            </div>
+            <div class="carousel-item">
+              <img src={{ url_for('static',filename='hospic6.jpg' ) }} style="height:650px ; width:100%;" />
+            </div>
+            <div class="carousel-item">
+              <img src={{ url_for('static',filename='hospic5.jpg' ) }} style="height:650px ; width:100%;" />
+            </div>
+          </div>
+
+          <!-- Left and right controls/icons -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- <div class="col-3 mt-4"> -->
+      <!-- <p class="h2 text-success"><strong>WE CARE WE CURE</strong></p> -->
+      <!-- <p class="h5 text-dark"><strong>Vision Care </strong>is the largest network of the world's finest and brightest medical experts who provide compassionate care using outstanding expertise and advanced technology.Combining the best specialists and equipment to provide you nothing short of the best in healthcare.The Eagle Care Hospitals are regarded as one of the best heart hospitals in India, performing a multitude of treatments and procedures in cardiology and cardiothoracic surgery. The scorecard shows an unmatched record of over 1,52,000 cardiac and cardiothoracic surgeries.</p> -->
+      <!-- </div> -->
+    </div>
+
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <section class="mx-auto my-5" style="max-width: 20rem;">
+          <div class="card testimonial-card mt-2 mb-3">
+            <div class="card-up aqua-gradient"></div>
+            <div class="avatar mx-auto white">
+              <img src={{ url_for('static', filename='24by7.png' ) }} class="rounded-circle img-fluid" alt="24/7 image"
+                style="background: white;">
+            </div>
+            <div class="card-body text-center">
+              <h4 class="card-title font-weight-bold">24 / 7 Service</h4>
+              <hr>
+              <p><i class="fas fa-quote-left"></i> Vision aims at providing 24/7 services and support</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-4">
+        <section class="mx-auto my-5" style="max-width: 20rem;">
+          <div class="card testimonial-card mt-2 mb-3">
+            <div class="card-up ambu-gradient"></div>
+            <div class="avatar mx-auto white">
+              <img src={{ url_for('static', filename='ambulance.png' ) }} class="rounded-circle img-fluid"
+                alt="24/7 image" style="background: white;">
+            </div>
+            <div class="card-body text-center">
+              <h4 class="card-title font-weight-bold">Ambulance service</h4>
+              <hr>
+              <p><i class="fas fa-quote-left"></i> Vision aims at providing faster and reachable ambulance service to
+                all areas</p>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="col-4">
+        <section class="mx-auto my-5" style="max-width: 20rem;">
+          <div class="card testimonial-card mt-2 mb-3">
+            <div class="card-up aqua-gradient"></div>
+            <div class="avatar mx-auto white">
+              <img src={{ url_for('static', filename='dochome.png' ) }} class="rounded-circle img-fluid"
+                alt="24/7 image" style="background: white;">
+            </div>
+            <div class="card-body text-center">
+              <h4 class="card-title font-weight-bold">Well experienced doctors</h4>
+              <hr>
+              <p><i class="fas fa-quote-left"></i>Vision treats you with well experienced doctors for faster recovery
+              </p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <!-- </main> -->
+
+  <footer id="footerhelp">
+    <div class="footer" id="footer">
+      <div class="footer-first">
+        <h3 style="color: aliceblue;">Vision Health Care</h3>
+        <h5 style="color: aliceblue;">Our vision of your healthy life</h5>
+      </div>
+      <div class="footer-second">
+        <ul>
+          <li><i class="fa-solid fa-envelope fa-color fa-customize"></i><a href="#">visionhealthcare@gmail.com</a></li>
+          <li><i class="fa-solid fa-phone fa-color fa-customize"></i><a href="#">7044432991, 9999444821</a></li>
+          <li><i class="fa-solid fa-location-dot fa-color fa-customize"></i><a href="#">4th block, Main Road, Behind
+              Infinity Mall, Techpoor - 999333 </a></li>
+        </ul>
+      </div>
+      <div class="footer-third">
+        <ul>
+          <li><i class="fa-brands fa-instagram fa-color fa-social"></i><a href="#">Follow us on Instagram</a></li>
+          <li><i class="fa-brands fa-facebook fa-color fa-social"></i><a href="#">Like us on Facebook</a></li>
+          <li><i class="fa-brands fa-twitter fa-color fa-social"></i><a href="#">Follow us on Twitter</a></li>
+          <li></li>
+        </ul>
+      </div>
+      <!-- <div class="footer-fourth">
+
+      </div> -->
+    </div>
+  </footer>
+</body>
+
+</html>
